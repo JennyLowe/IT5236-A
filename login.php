@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         # Build your JSON string
         $data = array("Username" => $username, "Password" => $password);
         $data_string = json_encode($data);
-
+   print_r($data);
         # Specify the url of the web service and initialize
         $url = 'https://n912kizrm9.execute-api.us-east-2.amazonaws.com/prod/UserLoginFunction';
         $handle = curl_init($url);
